@@ -168,7 +168,7 @@ B.append(f'''      </div>
   </section>
 
   <section class="section process ph" aria-labelledby="process-title">
-    <img class="process-bg img-fade" src="img/bg-800.webp" srcset="img/bg-800.webp 800w, img/bg-1200.webp 1200w, img/bg-1600.webp 1600w" sizes="(max-width: 767px) 220vw, 100vw" width="1600" height="1200" alt="" decoding="async" loading="lazy">
+    <img class="process-bg img-fade" src="img/bg-800.webp" srcset="img/bg-800.webp 800w, img/bg-1200.webp 1200w, img/bg-1600.webp 1600w" sizes="(max-width: 767px) 220vw, 100vw" width="1600" height="1067" alt="" decoding="async" loading="lazy">
     <div class="wrap">
       <h2 id="process-title" class="reveal">Three simple steps</h2>
       <ol class="process-list">
