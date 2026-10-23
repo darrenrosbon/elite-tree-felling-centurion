@@ -19,8 +19,9 @@ head = head.replace('<title>The Clean Yard Co. | Landscaping and Property Mainte
 head = head.replace('Irrigation, plumbing, renovations, painting and yard care in Diepsloot and surrounds. Free quotes, call or WhatsApp 071 200 7806.',
                     'Tree felling, tree trimming and branch removal in Centurion and Pretoria. Open 24 hours, free quotes, call or WhatsApp 065 610 9056.')
 head = re.sub(r'<link rel="preload"[^>]*>',
-              '<link rel="preload" as="image" imagesrcset="img/hero-1-480.webp 480w, img/hero-1-800.webp 800w, img/hero-1-1200.webp 1200w" imagesizes="(max-width: 767px) 200vw, 100vw" fetchpriority="high">', head)
-EXTRA = '''.work-gallery { grid-template-columns: 1fr 1fr; }
+              '<link rel="preload" as="image" imagesrcset="img/hero-3-480.webp 480w, img/hero-3-800.webp 800w, img/hero-3-1200.webp 1200w" imagesizes="(max-width: 767px) 200vw, 100vw" fetchpriority="high">', head)
+EXTRA = '''.hero-slides .hs { animation: none !important; clip-path: none !important; }
+.work-gallery { grid-template-columns: 1fr 1fr; }
 .work-gallery figure:last-child { grid-column: 1 / -1; }
 .work-gallery figure:last-child img { aspect-ratio: 4 / 3; }
 @media (min-width: 768px) {
@@ -33,7 +34,7 @@ EXTRA = '''.work-gallery { grid-template-columns: 1fr 1fr; }
 '''
 head = head.replace('</style>', EXTRA + '</style>', 1)
 head = head.replace('.hs3 { z-index: 3; object-position: 50% 80%;', '.hs3 { z-index: 3; object-position: 50% 30%;')
-head = head.replace('.hs1 { z-index: 1; object-position: 30% 50%; }', '.hs1 { z-index: 1; object-position: 50% 45%; }')
+head = head.replace('.hs1 { z-index: 1; object-position: 30% 50%; }', '.hs1 { z-index: 1; object-position: 50% 40%; }')
 head = head.replace('.hs2 { z-index: 2; clip-path', '.hs2 { z-index: 2; object-position: 50% 55%; clip-path')
 head = head.replace('</defs></svg>', '<symbol id="i-tree" viewBox="0 0 24 24"><path d="M12 2l5.5 7.5h-3L19 16h-5v5h-4v-5H5l4.5-6.5h-3z" fill="currentColor"/></symbol><symbol id="i-saw" viewBox="0 0 24 24"><path d="M3 15l4-9 3 2 3-4 3 3 5-1-2 9-3 1 1 2h-3l-1-2-4 1-1 2H5l1-3z" fill="currentColor"/></symbol><symbol id="i-truck" viewBox="0 0 24 24"><path d="M2 6h12v9H2zm13 3h4l3 3v3h-7zM6 17.5a2 2 0 1 0 .01 0zm11 0a2 2 0 1 0 .01 0z" fill="currentColor"/></symbol><symbol id="i-shield" viewBox="0 0 24 24"><path d="M12 2l8 3v6c0 5-3.4 9-8 11-4.6-2-8-6-8-11V5z" fill="currentColor"/></symbol></defs></svg>', 1)
 
@@ -93,9 +94,7 @@ B.append(f'''<header class="site-head">
 
   <section class="hero ph" aria-labelledby="hero-title">
     <div class="hero-slides" aria-hidden="true">
-      <img class="hs hs1" src="img/hero-1-800.webp" srcset="img/hero-1-480.webp 480w, img/hero-1-800.webp 800w, img/hero-1-1200.webp 1200w, img/hero-1-1600.webp 1600w" sizes="(max-width: 767px) 200vw, 100vw" width="1600" height="1200" alt="" fetchpriority="high" decoding="async">
-      <img class="hs hs2" src="img/hero-2-800.webp" srcset="img/hero-2-480.webp 480w, img/hero-2-800.webp 800w, img/hero-2-1200.webp 1200w, img/hero-2-1600.webp 1600w" sizes="(max-width: 767px) 200vw, 100vw" width="1600" height="1200" alt="" loading="lazy" decoding="async">
-      <img class="hs hs3" src="img/hero-3-800.webp" srcset="img/hero-3-480.webp 480w, img/hero-3-800.webp 800w, img/hero-3-1200.webp 1200w" sizes="(max-width: 767px) 200vw, 100vw" width="1200" height="1600" alt="" loading="lazy" decoding="async">
+      <img class="hs hs1" src="img/hero-3-800.webp" srcset="img/hero-3-480.webp 480w, img/hero-3-800.webp 800w, img/hero-3-1200.webp 1200w" sizes="(max-width: 767px) 200vw, 100vw" width="1200" height="1600" alt="Tall palms beside a house with a manicured lawn and flower beds" fetchpriority="high" decoding="async">
     </div>
     <div class="wrap hero-in">
       <div class="hero-plate" aria-hidden="true"><b>ELITE TREE FELLING</b><span>Centurion &amp; Pretoria</span></div>
