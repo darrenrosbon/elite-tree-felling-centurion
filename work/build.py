@@ -20,7 +20,8 @@ head = head.replace('Irrigation, plumbing, renovations, painting and yard care i
                     'Tree felling, tree trimming and branch removal in Centurion and Pretoria. Open 24 hours, free quotes, call or WhatsApp 065 610 9056.')
 head = re.sub(r'<link rel="preload"[^>]*>',
               '<link rel="preload" as="image" imagesrcset="img/hero-3-480.webp 480w, img/hero-3-800.webp 800w, img/hero-3-1200.webp 1200w" imagesizes="(max-width: 767px) 200vw, 100vw" fetchpriority="high">', head)
-EXTRA = '''.hero-slides .hs { animation: none !important; clip-path: none !important; }
+EXTRA = '''.process::before { background: linear-gradient(180deg, rgba(4, 14, 8, .62), rgba(4, 14, 8, .55) 50%, rgba(4, 14, 8, .7)); }
+.hero-slides .hs { animation: none !important; clip-path: none !important; }
 .work-gallery { grid-template-columns: 1fr 1fr; }
 .work-gallery figure:last-child { grid-column: 1 / -1; }
 .work-gallery figure:last-child img { aspect-ratio: 4 / 3; }
